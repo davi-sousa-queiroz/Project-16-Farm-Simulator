@@ -69,6 +69,18 @@ class Farm:
             "Magic Seeds": {"crop": 1, "seeds": 3}
         }
 
+    def _init_crop_prices(self):
+        return {
+            "Corn" : 15,
+            "Carrots" : 25,
+            "Watermelons" : 40,
+            "Pumpkins" : 55,
+            "Oranges" : 70,
+            "Apples" : 85,
+            "Magic Plants" : 150,
+
+        }
+
     def view_farm(self):
         farm_name = self.farm_name.capitalize()
         print(f"\n========== {farm_name} ==========")
