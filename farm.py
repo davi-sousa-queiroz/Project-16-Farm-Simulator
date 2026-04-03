@@ -58,7 +58,7 @@ class Farm:
 
     def view_inventory(self):
         print(f"\n========== SEEDS ==========")
-        for key, value in self._init_seeds().items():
+        for key, value in self.seeds.items():
             print(f"{key}: {value}")
         print("\n========== CROPS ==========")
         for key, value in self._init_crops().items():
