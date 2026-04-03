@@ -128,7 +128,7 @@ class Farm:
 
         # simulate growth
         print("\nPlanting...")
-        time.sleep(1)
+        time.sleep(3)
 
         print("Watering...")
         time.sleep(1)
