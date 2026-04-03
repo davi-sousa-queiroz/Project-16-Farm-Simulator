@@ -36,3 +36,9 @@ class Farm:
                 "Oranges" : 50,
                 "Apples" : 60,
                 "Magic Plants" : 70}
+
+    def view_farm(self):
+        farm_name = self.farm_name.capitalize()
+        print(f"\n========== {farm_name} ==========")
+        print(f"==========\t  Coins: {self.coins}    ===========")
+        print("=====================================")
