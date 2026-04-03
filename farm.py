@@ -42,3 +42,11 @@ class Farm:
         print(f"\n========== {farm_name} ==========")
         print(f"==========\t  Coins: {self.coins}    ===========")
         print("=====================================")
+
+    def view_inventory(self):
+        print(f"\n========== SEEDS ==========")
+        for key, value in self._init_seeds().items():
+            print(f"{key}: {value}")
+        print("\n========== CROPS ==========")
+        for key, value in self._init_crops().items():
+            print(f"{key}: {value}")
