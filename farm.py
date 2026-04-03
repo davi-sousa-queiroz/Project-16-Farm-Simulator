@@ -32,13 +32,23 @@ class Farm:
                 "Magic Plants" : 0}
 
     def _init_seed_prices(self):
-        return {"Corn" : 10,
-                "Carrots" : 20,
-                "Watermelons" : 30,
-                "Pumpkins" : 40,
-                "Oranges" : 50,
-                "Apples" : 60,
-                "Magic Plants" : 70}
+        return {"Corn Seeds" : 10,
+                "Carrot Seeds" : 20,
+                "Watermelon Seeds" : 30,
+                "Pumpkin Seeds" : 40,
+                "Orange Seeds" : 50,
+                "Apple Seeds" : 60,
+                "Magic Seeds" : 100}
+
+    def _init_seed_to_crops(self):
+        return {"Corn Seeds" : "Corn",
+                "Carrot Seeds" : "Carrots",
+                "Watermelon Seeds" : "Watermelons",
+                "Pumpkin Seeds" : "Pumpkins",
+                "Orange Seeds" : "Oranges",
+                "Apple Seeds" : "Apples",
+                "Magic Seeds" : "Magic Plants"
+        }
 
     def view_farm(self):
         farm_name = self.farm_name.capitalize()
