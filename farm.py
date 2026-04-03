@@ -139,6 +139,67 @@ class Farm:
         print(f"+{reward['crop']} {crop_name}")
         print(f"+{reward['seeds']} {selected_seed}")
 
+    def sell(self):
+
+        print("\n========== SELL ==========")
+        print("1. Sell Seeds")
+        print("2. Sell Crops")
+
+        choice = input("\n>> ")
+
+        if choice == "1":
+            items = self.seeds
+            prices = self.seed_prices
+        elif choice == "2":
+            items = self.crops
+            prices = self.crop_prices
+        else:
+            print("Invalid choice")
+            return
+
+        items_list = list(items.keys())
+
+        print("\nWhat do you want to sell?")
+        for i, (name, qty) in enumerate(items.items(), start=1):
+            print(f"{i}. {name:<17} | {qty} | Price: {prices[name]}")
+
+        try:
+            selection = int(input("\n>> "))
+        except:
+            print("Invalid input")
+            return
+
+        if not (1 <= selection <= len(items_list)):
+            print("Invalid selection")
+            return
+
+        selected_item = items_list[selection - 1]
+
+        if items[selected_item] <= 0:
+            print("\nYou don't have any 😕")
+            return
+
+        try:
+            amount = int(input("How many? >> "))
+        except:
+            print("Invalid amount")
+            return
+
+        if amount <= 0 or amount > items[selected_item]:
+            print("Invalid amount")
+            return
+
+        total = amount * prices[selected_item]
+
+        items[selected_item] -= amount
+        self.coins += total
+
+        print(f"\nSold {amount} {selected_item} for {total} coins 💰")
+
+    def shop(self):
+
+        print("\n========== SHOP ==========")
+        print(f"Coins: {self.coins} 💰")
 
 # test
 farm = Farm("corn")
