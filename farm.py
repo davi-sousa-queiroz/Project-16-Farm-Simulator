@@ -18,3 +18,12 @@ class Farm:
             "Orange Seeds" : 0,
             "Apple Seeds" : 0,
             "Magic Seeds" : 0}
+
+    def _init_crops(self):
+        return {"Corn" : 0,
+                "Carrots" : 0,
+                "Watermelons" : 0,
+                "Pumpkins" : 0,
+                "Oranges" : 0,
+                "Apples" : 0,
+                "Magic Plants" : 0}
