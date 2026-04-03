@@ -1,3 +1,5 @@
+import time
+
 class Farm:
 
     def __init__(self, farm_name):
