@@ -215,3 +215,43 @@ class Farm:
         print(f"Coins: {self.coins} 💰")
 
         seeds_list = list(self.seeds.keys())
+
+        print("\nAvailable Seeds:")
+        for i, (seed, price) in enumerate(self.seed_prices.items(), start=1):
+            print(f"{i}. {seed:<17} | Price: {price}")
+
+        try:
+            choice = int(input("\nSelect seed to buy >> "))
+        except:
+            print("Invalid input")
+            return
+
+        if not (1 <= choice <= len(seeds_list)):
+            print("Invalid choice")
+            return
+
+        selected_seed = seeds_list[choice - 1]
+        price = self.seed_prices[selected_seed]
+
+        print(f"\nSelected: {selected_seed} ({price} coins each)")
+
+        try:
+            amount = int(input("How many? >> "))
+        except:
+            print("Invalid amount")
+            return
+
+        if amount <= 0:
+            print("Invalid amount")
+            return
+
+        total_cost = amount * price
+
+        if self.coins < total_cost:
+            print("\nNot enough coins 😕")
+            return
+
+        self.coins -= total_cost
+        self.seeds[selected_seed] += amount
+
+        print(f"\nBought {amount} {selected_seed} for {total_cost} coins 💰")
