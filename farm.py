@@ -214,7 +214,4 @@ class Farm:
         print("\n========== SHOP ==========")
         print(f"Coins: {self.coins} 💰")
 
-# test
-farm = Farm("corn")
-farm.plant()
-farm.view_inventory()
+        seeds_list = list(self.seeds.keys())
