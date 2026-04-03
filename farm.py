@@ -27,3 +27,12 @@ class Farm:
                 "Oranges" : 0,
                 "Apples" : 0,
                 "Magic Plants" : 0}
+
+    def _init_seed_prices(self):
+        return {"Corn" : 10,
+                "Carrots" : 20,
+                "Watermelons" : 30,
+                "Pumpkins" : 40,
+                "Oranges" : 50,
+                "Apples" : 60,
+                "Magic Plants" : 70}
