@@ -123,25 +123,24 @@ class Farm:
 
         print(f"\nYou selected: {selected_seed}")
 
-        # remove seed
         self.seeds[selected_seed] -= 1
 
-        # simulate growth
         print("\nPlanting...")
         time.sleep(3)
 
         print("Watering...")
-        time.sleep(1)
+        time.sleep(3)
 
         print("Growing...")
-        time.sleep(1)
+        time.sleep(3)
 
         print("Harvesting...")
-        time.sleep(1)
+        time.sleep(3)
 
         print("Done! 🌾")
 
-        # rewards
+        time.sleep(1.5)
+
         crop_name = self.seed_to_crops[selected_seed]
         reward = self.seed_rewards[selected_seed]
 
