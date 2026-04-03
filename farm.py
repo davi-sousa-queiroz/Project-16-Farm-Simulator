@@ -61,5 +61,5 @@ class Farm:
         for key, value in self.seeds.items():
             print(f"{key}: {value}")
         print("\n========== CROPS ==========")
-        for key, value in self._init_crops().items():
+        for key, value in self.crops.items():
             print(f"{key}: {value}")
