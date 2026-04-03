@@ -10,6 +10,7 @@ class Farm:
         self.seeds = self._init_seeds()
         self.crops = self._init_crops()
         self.seed_prices = self._init_seed_prices()
+        self.seed_to_crops = self._init_seed_to_crops()
 
     def _init_seeds(self):
         return {
